@@ -1,0 +1,30 @@
+.results {
+    h4 {
+        color: $gray-7;
+    }
+
+    .table {
+        margin-top: 2rem;
+
+        &__title {
+            align-items: center;
+        }
+
+        &__actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .separator {
+                border-right: 1px solid $border-color;
+                height: 1.5rem;
+            }
+        }
+
+        &__row {
+            &:hover {
+                background-color: $yellow-1;
+            }
+        }
+    }
+}

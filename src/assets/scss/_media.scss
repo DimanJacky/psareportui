@@ -1,0 +1,22 @@
+$phone-width: 415px;
+$ipad-width: 1024px;
+$desktop-width: 1280px;
+
+
+@mixin media($media) {
+    @if ($media == phone) or ($media == xs) {
+        @media only screen and (max-width: $phone-width) {
+            @content;
+        }
+    }
+    @else if ($media == ipad) or ($media == sm) {
+        @media only screen and (max-width: $ipad-width) {
+            @content;
+        }
+    }
+    @else if ($media == desktop) or ($media == lg) {
+        @media only screen and (min-width: $desktop-width) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+include:
+  - project: 'neo-projects/gitlab-templates'
+    ref: master
+    file: 'web-ui-template.yaml'
+  - project: 'neo-projects/gitlab-templates'
+    ref: master
+    file: 'deploy-psa-envrouter-template.yaml'
+
+stages:
+  - build
+  - docker
+  - deploy
+
+variables:
+  APP_NAME: msa-psa-report-ui
+  PROJECT_NAME: psa
+  YQ_PATH_APP: ".reportui"

@@ -1,0 +1,49 @@
+@import 'settings';
+
+@import 'fonts';
+@import 'media';
+@import 'common';
+
+:root {
+}
+
+
+%page-size {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 3.5rem;
+}
+
+
+:global {
+    #root {
+        min-height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-size {
+        @extend %page-size;
+    }
+
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .page-body {
+            flex-grow: 1;
+            padding-bottom: 3.5rem;
+
+            @extend %page-size;
+        }
+    }
+
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+}

@@ -1,0 +1,47 @@
+.paper {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid $border-color;
+
+        .title {
+            margin: 0;
+        }
+    }
+
+    .body {
+        padding: 1rem 2rem;
+        display: none;
+
+        &.open {
+            display: block;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+
+            & > DIV:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            .load {
+                min-width: 7rem;
+            }
+        }
+
+        .buttons {
+            BUTTON {
+                margin: 0;
+
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
